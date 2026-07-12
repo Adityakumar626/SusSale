@@ -6,6 +6,9 @@ import { Toaster } from "@/components/ui/sonner";
 export const metadata: Metadata = {
   title: "SusSale",
   description: "Don't Miss any price drop on any product.",
+  icons:{
+    icon : "https://cdn-icons-png.flaticon.com/128/10893/10893970.png "
+  }
 };
 
 export default function RootLayout({

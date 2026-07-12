@@ -39,7 +39,6 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen bg-linear-to-tl from-blue-200 via-blue-50 to-blue-100 dark:from-blue-950 dark:via-indigo-950 dark:to-blue-900 transition-colors duration-500">
-      {/* Sticky Blurred Header */}
       <header className="sticky top-0 z-50 border-b border-gray-200/50 bg-white/10 backdrop-blur-md dark:border-gray-800/50 dark:bg-gray-900/70 transition-all">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3 group cursor-pointer">
@@ -86,15 +85,15 @@ export default async function Home() {
               {FEATURES.map(({ icon: Icon, title, description }) => (
                 <div
                   key={title}
-                  className="group p-6 rounded-2xl border border-white/40 dark:border-white/10 bg-white/40 dark:bg-gray-900/40 backdrop-blur-md shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 text-left"
+                  className="group p-6 rounded-2xl border border-white/40 dark:border-white/10 bg-white/40 dark:bg-gray-900/40 backdrop-blur-md shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 dark:bg-blue-900/60 bg-blue-100/80 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 mx-auto dark:bg-blue-900/60 bg-blue-100/80 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Icon className="w-6 h-6 text-blue-600 dark:text-blue-400 group-hover:rotate-6 transition-transform duration-300" />
                   </div>
-                  <h3 className="font-semibold text-lg text-gray-900 dark:text-white mb-2">
+                  <h3 className="font-semibold text-center text-lg text-gray-900 dark:text-white mb-2">
                     {title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <p className="text-sm text-center text-gray-600 dark:text-gray-300 leading-relaxed">
                     {description}
                   </p>
                 </div>
