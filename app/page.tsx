@@ -1,13 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { black, geist, sour } from "../font/font";
-import {
-  LogIn,
-  Rabbit,
-  Shield,
-  Bell,
-  TrendingDown,
-  Sparkles,
-} from "lucide-react";
+import { Rabbit, Shield, Bell, TrendingDown } from "lucide-react";
 import AddProductForm from "@/components/AddProductForm";
 import ThemeToggle from "@/components/themeBtn";
 import AuthButton from "../components/AuthButton";
@@ -47,13 +40,13 @@ export default async function Home() {
   return (
     <main className="min-h-screen bg-linear-to-tl from-blue-200 via-blue-50 to-blue-100 dark:from-blue-950 dark:via-indigo-950 dark:to-blue-900 transition-colors duration-500">
       {/* Sticky Blurred Header */}
-      <header className="sticky top-0 z-50 border-b border-gray-200/50 bg-white/70 backdrop-blur-md dark:border-gray-800/50 dark:bg-gray-900/70 transition-all">
+      <header className="sticky top-0 z-50 border-b border-gray-200/50 bg-white/10 backdrop-blur-md dark:border-gray-800/50 dark:bg-gray-900/70 transition-all">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3 group cursor-pointer">
             <span
               className={`text-2xl ${sour.className} dark:text-white transition-transform group-hover:scale-105 duration-200`}
             >
-              <span className={`text-orange-500 font-bold ${geist.className}`}>
+              <span className={`text-blue-500 font-bold ${geist.className}`}>
                 Sus
               </span>
               Sale

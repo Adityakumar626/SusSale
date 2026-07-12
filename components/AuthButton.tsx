@@ -13,7 +13,7 @@ const AuthButton = ({ user }: any) => {
 
   if (user) {
     return (
-      <div className="flex justify-center items-center gap-2">
+      <div className="flex justify-center items-center gap-3">
         <ThemeToggle />
         <Button
           onClick={() => signOut()}
@@ -39,10 +39,10 @@ const AuthButton = ({ user }: any) => {
         onClick={() => setShowAuthModal(true)}
         variant="outline"
         size={"lg"}
-        className="cursor-pointer bg-sky-300"
+        className="cursor-pointer bg-blue-400 dark:border  dark:border-black"
       >
         <span
-          className={`${sour.className} flex items-center gap-1 dark:text-white`}
+          className={`${sour.className} flex items-center gap-1 dark:text-gray-200`}
         >
           Login
           <LogIn />

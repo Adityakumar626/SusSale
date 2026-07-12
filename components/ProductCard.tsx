@@ -18,8 +18,9 @@ import { Card, CardHeader, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import PriceChart from "./PriceChart";
+import { ProductProps } from "@/types/type";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product }: ProductProps) {
   const [showChart, setShowChart] = useState(false);
   const [deleting, setDeleting] = useState(false);
 

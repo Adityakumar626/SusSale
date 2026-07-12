@@ -112,6 +112,7 @@ export const deleteProduct = async (productId: string) => {
     revalidatePath("/");
     return {
       success: true,
+      message : "Product deleted successfully"
     };
   } catch (error: any) {
     return { error: error.messages };

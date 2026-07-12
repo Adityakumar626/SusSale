@@ -10,11 +10,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { createClient } from "@/lib/supabase/client";
-
-interface AuthModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
+import { AuthModalProps } from "../types/type";
 
 export function AuthModal({ isOpen, onClose }: AuthModalProps) {
   const supabase = createClient();
@@ -24,13 +20,13 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
 
     await supabase.auth.signInWithOAuth({
       provider: "google",
-      options: { redirectTo: `${origin}/auth/callback` },
+      options: { redirectTo: `${origin}/auth/callback` }, // where google sends back the user after successfull login
     });
   };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[400px] p-6 rounded-2xl bg-background/95 backdrop-blur-md border border-border/60 shadow-2xl transition-all">
+      <DialogContent className="sm:max-w-150 p-6 rounded-2xl bg-background/95 backdrop-blur-md border border-border/60 shadow-2xl transition-all">
         <DialogHeader className="text-center space-y-2 sm:text-center">
           <DialogTitle className="text-2xl font-bold tracking-tight text-foreground">
             Welcome Back

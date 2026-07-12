@@ -78,9 +78,9 @@ function PriceChart({ productId }: PriceChartProps) {
           <Line
             type="monotone"
             dataKey="price"
-            stroke="#FA5D19"
+            stroke="#4b61eb"
             strokeWidth={2}
-            dot={{ fill: "#FA5D19", r: 4 }}
+            dot={{ fill: "#1937fa", r: 4 }}
             activeDot={{ r: 6 }}
           />
         </LineChart>

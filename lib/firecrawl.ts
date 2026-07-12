@@ -1,16 +1,9 @@
 import { Firecrawl } from "firecrawl";
-import { reset } from "next/dist/lib/picocolors";
+import {ProductData} from "../types/type"
 
 const firecrawl = new Firecrawl({
   apiKey: process.env.FIRECRAWL_API_KEY,
 });
-
-interface ProductData {
-  productName: string;
-  currentPrice: number;
-  currencyCode?: string;
-  productImageUrl?: string;
-}
 
 export const scrapeProduct = async (url: string) => {
   try {
