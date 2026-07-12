@@ -1,7 +1,9 @@
 import { Product } from "@/types/type";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const getResendClient = () => {
+  return new Resend(process.env.RESEND_API_KEY);
+};
 
 export async function sendPriceDropAlert(
   userEmail: string,
@@ -10,6 +12,7 @@ export async function sendPriceDropAlert(
   newPrice: number,
 ) {
   try {
+    const resend = getResendClient();
     const priceDrop = oldPrice - newPrice;
     const percentageDrop =
       oldPrice > 0 ? ((priceDrop / oldPrice) * 100).toFixed(1) : "0.0";

@@ -1,12 +1,15 @@
 import { Firecrawl } from "firecrawl";
-import {ProductData} from "../types/type"
+import { ProductData } from "../types/type";
 
-const firecrawl = new Firecrawl({
-  apiKey: process.env.FIRECRAWL_API_KEY,
-});
+const getFirecrawlClient = () => {
+  return new Firecrawl({
+    apiKey: process.env.FIRECRAWL_API_KEY,
+  });
+};
 
 export const scrapeProduct = async (url: string) => {
   try {
+    const firecrawl = getFirecrawlClient();
     const result = await firecrawl.scrape(url, {
       formats: [
         {

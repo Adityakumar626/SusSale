@@ -1,0 +1,8 @@
+firecrawl.ts
+
+import Firecrawl
+
+const firecrawl = new Firecrawl()
+                         ^
+                         |
+                    runs immediately
